@@ -18,3 +18,5 @@
 </p>
 
 ![todolist](https://user-images.githubusercontent.com/101608868/163796541-110ee1cb-d80f-4de8-9e4d-84a85745fdcf.png)
+
+본 repositorie는 [벨로퍼트's Todolist](https://github.com/velopert/react-tutorial.git)를 따라하며 실습한 프로젝트 입니다.
