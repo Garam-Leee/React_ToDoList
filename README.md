@@ -9,7 +9,7 @@
 └── 📄 reset.css  <br>
 
  <br> <br>
-📁 components
+📁 components <br>
 ├── 📄 Head.js          : 오늘 날짜, 남은 TodoList 갯수 반환 <br>
 ├── 📄 Template.js      : 최상위 레이아웃  <br>
 ├── 📄 TodoCreate.js    : 하단 +버튼을 클릭하여 새로운 Todo를 등록 <br>
