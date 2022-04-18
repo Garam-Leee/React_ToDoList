@@ -1,17 +1,18 @@
 # Getting Started with React TodoList
+<p>
+📁 src <br>
+├── 📁 components <br>
+├── 📄 App.js <br>
+├── 📄 index.js <br>
+├── 📄 style.css <br>
+├── 📄 TodoContext.js  <br>
+└── 📄 reset.css  <br>
 
-📁 src
-├── 📁 components
-├── 📄 App.js
-├── 📄 index.js
-├── 📄 style.css
-├── 📄 TodoContext.js 
-└── 📄 reset.css 
-
-
+ <br> <br>
 📁 components
-├── 📄 Head.js          : 오늘 날짜, 남은 TodoList 갯수 반환
-├── 📄 Template.js      : 최상위 레이아웃 
-├── 📄 TodoCreate.js    : 하단 +버튼을 클릭하여 새로운 Todo를 등록
-├── 📄 TodoItem.js      : Todo에 대한 정보 및 완료여부, 삭제여부 렌더링 컴포넌트
-└── 📄 TodoList.js      : Todo에 대한 정보가 들어있는 배열을 map을 사용하여 컴포넌트 렌더링
+├── 📄 Head.js          : 오늘 날짜, 남은 TodoList 갯수 반환 <br>
+├── 📄 Template.js      : 최상위 레이아웃  <br>
+├── 📄 TodoCreate.js    : 하단 +버튼을 클릭하여 새로운 Todo를 등록 <br>
+├── 📄 TodoItem.js      : Todo에 대한 정보 및 완료여부, 삭제여부 렌더링 컴포넌트 <br>
+└── 📄 TodoList.js      : Todo에 대한 정보가 들어있는 배열을 map을 사용하여 컴포넌트 렌더링 <br>
+</p>

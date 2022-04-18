@@ -91,6 +91,8 @@ function TodoCreate() {
     e.preventDefault(); // 새로고침 방지
     dispatch({
       type: 'CREATE',
+
+      
       todo: {
         id: nextId.current,
         text: value,
