@@ -100,13 +100,13 @@ function TodoCreate() {
     });
     setValue("");
     setOpen(false);
-    nextId.current += 1;  
+    nextId.current += 1;
   };
   return (
     <>
       {open && (
         <InsertFormPositioner>
-          <InsertForm onSubmit={onSubmit}>
+          <InsertForm rtForm onSubmit={onSubmit}>
             <Input
               autoFocus
               placeholder="할 일을 입력 후, Enter 를 누르세요"
