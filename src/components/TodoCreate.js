@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
-import { MdAdd } from 'react-icons/md';
-import { useTodoDispatch, useTodoNextId } from '../TodoContext';
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+import { MdAdd } from "react-icons/md";
+import { useTodoDispatch, useTodoNextId } from "../TodoContext";
 
 const CircleButton = styled.button`
   background: #38d9a9;
@@ -35,7 +35,7 @@ const CircleButton = styled.button`
   transition: 0.125s all ease-in;
 
   // open일때
-  ${props =>
+  ${(props) =>
     props.open &&
     css`
       background: #ff6b6b;
@@ -45,7 +45,7 @@ const CircleButton = styled.button`
       &:active {
         background: #fa5252;
       }
-      //회전 
+      //회전
       transform: translate(-50%, 50%) rotate(45deg);
     `}
 `;
@@ -82,34 +82,33 @@ const Input = styled.input`
 
 function TodoCreate() {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const dispatch = useTodoDispatch();
   const nextId = useTodoNextId();
   const onToggle = () => setOpen(!open);
-  const onChange = e => setValue(e.target.value); 
-  const onSubmit = e => {
+  const onChange = (e) => setValue(e.target.value);
+  const onSubmit = (e) => {
     e.preventDefault(); // 새로고침 방지
     dispatch({
-      type: 'CREATE',
+      type: "CREATE",
 
-      
       todo: {
         id: nextId.current,
         text: value,
-        done: false
-      }
+        done: false,
+      },
     });
-    setValue('');
+    setValue("");
     setOpen(false);
-    nextId.current += 1;
-  }; 
+    nextId.current += 1;  
+  };
   return (
     <>
       {open && (
         <InsertFormPositioner>
           <InsertForm onSubmit={onSubmit}>
             <Input
-              autoFocus 
+              autoFocus
               placeholder="할 일을 입력 후, Enter 를 누르세요"
               onChange={onChange}
               value={value}
@@ -126,4 +125,4 @@ function TodoCreate() {
 }
 
 export default React.memo(TodoCreate);
-// 컴퍼넌트가 React.memo()로 래핑 될 때, React는 컴퍼넌트를 렌더링하고 결과를 메모이징(Memoizing)한다. 그리고 다음 렌더링이 일어날 때 props가 같다면, React는 메모이징(Memoizing)된 내용을 재사용한다.
+// 컴포넌트가 React.memo()로 래핑 될 때, React는 컴퍼넌트를 렌더링하고 결과를 메모이징(Memoizing)한다. 그리고 다음 렌더링이 일어날 때 props가 같다면, React는 메모이징(Memoizing)된 내용을 재사용한다.
